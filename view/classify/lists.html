@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<table border="1" cellpadding="0" cellspacing="0">
+<tr>
+	<td>id</td>
+	<td>name</td>
+	<td>parent_id</td>
+	<td>hendle</td>
+	<td>update</td>
+	<td>time</td>
+</tr>
+	<?php foreach ($data as $key => $value) { ?>
+		<tr>
+			<td><?php echo $value['id']?></td>
+			<td><?php echo $value['name']?></td>
+			<td><?php echo $value['parent_id']?></td>
+			<td>
+			<?php if ($value['status']==0) { ?>
+				<a href="index.php?c=classify&a=online&id=<?php echo $value['id']?>">上线</a>
+			<?php } else if ($value['status'] == 1) { ?>
+				<a href="index.php?c=classify&a=offline&id=<?php echo $value['id']?>">下线</a>
+			
+			<?php } ?>
+			</td>
+			<td><a href="index.php?c=classify&a=edit&id=<?php echo $value['id']; ?>">编辑</a></td>
+			<td><?php echo $value['createtime'] > 0 ? date("Y-m-d H:i:s",$value['createtime']) : "无"; ?></td>
+		</tr>
+	<?php } ?>
+
+	
+</table>
+	<a href="index.php?c=classify&a=add">添加分类</a>
+
+</body>
+</html>

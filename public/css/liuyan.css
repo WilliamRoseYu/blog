@@ -1,0 +1,257 @@
+/****留言板****/
+html body {
+    color: #fff;
+}
+
+.clearfix::after {
+    display: block;
+    height: 0;
+    content: "";
+    clear: both;
+}
+
+.ctitle {
+    margin-top: 30px;
+}
+
+.ctitle img {
+    margin-left: 30px;
+}
+
+.ctitle span {
+    vertical-align: middle;
+    line-height: 57px;
+    float: right;
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 20px;
+    text-shadow: rgba(7, 84, 152, 0.71) 1px 1px 1px;
+}
+
+.gbook {
+    width: 900px;
+    margin: 35px auto;
+}
+
+.about-girl {
+    width: 900px;
+    height: 130px;
+}
+
+.about-girl img {
+    border-radius: 130px;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+.about-girl span {
+    display: inline-block;
+    width: 450px;
+    height: 38px;
+    padding: 20px;
+    margin: 20px;
+    background: #ececec;
+    color: #444;
+    box-shadow: inset #999 -1px -1px 1px;
+    text-shadow: #fff 1px 1px 0px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.about-girl span:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #ececec transparent;
+    position: absolute;
+    left: -20px;
+    top: 24px;
+}
+
+.gbko {
+    width: 780px;
+    padding: 0 30px 30px 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin: 30px auto;
+}
+
+.release {
+    width: 780px;
+    height: 200px;
+}
+
+.release-head {
+    width: 780px;
+    height: 60px;
+    position: absolute;
+}
+
+.release-head-login {
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    border: 1px solid #E74851;
+    line-height: 42px;
+    text-align: center;
+    position: absolute;
+    bottom: -7px;
+    left: 10px;
+    background: url("../img/login-ba.png");
+}
+
+.release-head-login a {
+    color: #E74851;
+    font-size: 14px;
+}
+
+.gbko-input {
+    width: 780px;
+    height: 97px;
+    border: 1px solid #E74851;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+
+.gbko-input textarea {
+    width: 744px;
+    height: 70px;
+    border: none;
+    margin-top: 20px;
+    padding: 0px 10px 0 20px;
+    font-size: 12px;
+    outline: none;
+}
+
+.gbko-btn {
+    width: 780px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 108px;
+    height: 35px;
+    float: right;
+    cursor: pointer;
+    background: url("../img/btn.png");
+}
+
+.gbko-btn ul {
+    float: left;
+}
+
+.gbko-btn ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+.comment-title {
+    width: 780px;
+    height: 30px;
+    margin-top: 50px;
+}
+
+.comment-title span {
+    display: inline-block;
+    width: 66px;
+    height: 30px;
+    border: 1px solid #E74851;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    float: left;
+    color: #E74851;
+    line-height: 30px;
+    text-align: center;
+}
+
+.comment-title p {
+    width: 712px;
+    height: 30px;
+    border-bottom: 1px solid #E74851;
+    float: left;
+    margin-left: -2px;
+    color: #E74851;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    text-align: right;
+}
+
+.comment-title p i {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 5px;
+    font-family: Impact;
+}
+
+.comment-news {
+    padding-left: 10px;
+    border-left: 3px solid #E74851;
+    margin-top: 20px;
+    color: #E74851;
+}
+
+.comment-content-box {
+    width: 780px;
+    margin-top: 20px;
+}
+
+.comment-content-box li {
+    width: 780px;
+    /*height:90px;*/
+    padding: 12px 0;
+    border-top: 1px dashed #e5e5e5;
+}
+
+.comment-content-box li img {
+    width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    margin-top: 7px;
+    float: left;
+}
+
+.comment-right {
+    width: 780px;
+    /*height: 90px;*/
+    padding-left: 62px;
+    box-sizing: border-box;
+    color: #E74851;
+}
+
+.comment-right-title span {
+    font-size: 12px;
+}
+
+.comment-time {
+    float: right;
+    font-family: Arial;
+    color: silver;
+}
+
+.commentCon {
+    padding-top: 12px;
+    line-height: 22px;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 25px;
+}
+.comment-right-foot {
+    width: 170px;
+    height: 25px;
+    float: right;
+    line-height: 25px;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-top:-25px;
+    background: url("../img/comfoot.png") no-repeat right;
+}
+
+.comment-right-foot a:hover {
+    color: #E74851;
+}
+

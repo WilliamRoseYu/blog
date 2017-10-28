@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {width:1000px;margin: 0 auto}
+		table {margin:0 auto;}
+		td {width:100px;text-align:center;}
+		li {display:inline-block;border:1px solid #ccc;padding:10px;}
+	</style>
+	<meta charset="utf-8">
+</head>
+<body>
+<table border="1px" cellspacing="0" cellpadding="0"> 
+	<tr>
+		<td>id</td>
+		<td>content</td>
+		<td>i</td>
+		<td>classify</td>
+		<td>time</td>
+	</tr>
+
+	<?php foreach($data as $key=>$value) { ?>
+	<tr>
+		<td><?php echo $value['id']; ?></td>
+		<td><?php echo mb_substr($value['content'], 0, 19,'utf8'); ?></td>
+		<td><?php echo $value['user_name']; ?></td>
+		<td>
+			<img src="<?php echo $value['image']; ?>" width="100" height="auto" alt="no pic">
+		</td>
+		<td><?php echo $value['classify_id']; ?></td>
+		<td><?php echo $value['createtime'] > 0 ? date("Y-m-d H:i:s",$value['createtime']) : "无"; ?></td>
+	</tr>
+	<?php } ?>
+</table>
+<a href="index.php?c=Blog&a=add">发段子</a>
+</body>
+</html>
