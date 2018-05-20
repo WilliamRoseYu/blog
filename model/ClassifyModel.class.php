@@ -1,12 +1,18 @@
 <?php
-	class ClassifyModel {
-		public $mysqli;
-		public function __construct() {
-			$this->mysqli = new mysqli("127.0.0.1","root","","blog");
-			$this->mysqli->query('set names utf8');
+	class ClassifyModel extends Model {
+		// public $mysqli;
+		// public function __construct() {
+		// 	$this->mysqli = new mysqli("127.0.0.1","root","","blog");
+		// 	$this->mysqli->query('set names utf8');
+		// }
+		public $table = 'classify';
+		public function add($name,$parent_id=0){
+			$sql = "insert into classify (name,parent_id) values('{name}',{parent_id})";
+		echo $sql;
+		return $this->mysqli->query($sql);
 		}
-		public function getLists() {
-			$sql = "select * from classify where parent_id = 0";
+		public function getLists($pid=0) {
+			$sql = "select * from classify where parent_id = {$pid}";
 			$res = $this->mysqli->query($sql);
 			$data = $res->fetch_all(MYSQL_ASSOC);
 			foreach ($data as $key => $value) {
@@ -30,7 +36,7 @@
 			$data = $res->fetch_all(MYSQL_ASSOC);
 			return $data;
 		}
-		public function audit($id,$status){
+		public function audit($id,$status=0){
 			$sql = "update  classify set status={$status} where id = {$id}";
 			$res = $this->mysqli->query($sql);
 			return $res;

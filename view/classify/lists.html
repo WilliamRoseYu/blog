@@ -27,7 +27,7 @@
 			
 			<?php } ?>
 			</td>
-			<td><a href="index.php?c=classify&a=edit&id=<?php echo $value['id']; ?>">编辑</a></td>
+			<td><a href="/Admin/classify/a=edit&id=<?php echo $value['id']; ?>">编辑</a></td>
 			<td><?php echo $value['createtime'] > 0 ? date("Y-m-d H:i:s",$value['createtime']) : "无"; ?></td>
 		</tr>
 	<?php } ?>

@@ -7,13 +7,17 @@
 		}
 	public function doAdd() {
 			$upload = L("Upload");
+			$uploadRes = $upload->run('image');
+			if ($uploadRes['status'] == 'error') {
+				die($uploadRes['msg']);
+			}
 			$filename = $upload->run('image');
 			$content = $_POST['content'];
 			$classify = $_POST['classify'];
 			$title = $_POST['title'];
 			$data = array(
 				'content' 	=> $content,
-				'classify' 	=> $classify,
+				'classify_id' 	=> $classify,
 				'title' 	=> $title,
 				'image' 	=> $filename,
 				);
